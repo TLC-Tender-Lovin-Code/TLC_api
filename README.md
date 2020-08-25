@@ -27,10 +27,11 @@ This API stores information on the user and a resource, resource being devposts.
 | DELETE | `/sign-out`            | `users#signout`   |
 | PATCH  | `/change-password`     | `users#changepw`  |
 | GET    | `/devposts`            | `devposts#index`  |
-| GET    | `/devpost/:id`            | `devposts#index`  |
-| POST   | `/create-post`            | `devposts#create` |
-| PATCH  | `/update-post/:id`        | `devposts#update` |
-| DELETE | `/delete-post/:id`            | `devposts#delete`  |
+| GET    | `/devpost/:id`         | `devposts#index`  |
+| POST   | `/create-post`         | `devposts#create` |
+| PATCH  | `/update-post/:id`     | `devposts#update` |
+| DELETE | `/delete-post/:id`     | `devposts#delete` |
+|--------|------------------------|-------------------|
 
 All data returned from API actions is formatted as JSON.
 
