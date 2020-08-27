@@ -97,7 +97,7 @@ router.patch('/devposts/:id', requireToken, removeBlanks, (req, res, next) => {
 
 // DESTROY
 // DELETE /devposts/5a7db6c74d55bc51bdf39793
-router.delete('/delete-post/:id', requireToken, (req, res, next) => {
+router.delete('/devposts/:id', requireToken, (req, res, next) => {
   Devpost.findById(req.params.id)
     .then(handle404)
     .then(devpost => {
