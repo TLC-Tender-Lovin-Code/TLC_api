@@ -45,7 +45,7 @@ router.get('/devposts', requireToken, (req, res, next) => {
 
 // SHOW
 // GET /devposts/5a7db6c74d55bc51bdf39793
-router.get('/devpost/:id', requireToken, (req, res, next) => {
+router.get('/devposts/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Devpost.findById(req.params.id)
     .then(handle404)
@@ -57,7 +57,7 @@ router.get('/devpost/:id', requireToken, (req, res, next) => {
 
 // CREATE
 // POST /devposts
-router.post('/create-post', requireToken, (req, res, next) => {
+router.post('/devposts', requireToken, (req, res, next) => {
   // set owner of new devpost to be current user
   req.body.devpost.owner = req.user.id
 
@@ -74,7 +74,7 @@ router.post('/create-post', requireToken, (req, res, next) => {
 
 // UPDATE
 // PATCH /devposts/5a7db6c74d55bc51bdf39793
-router.patch('/update-post/:id', requireToken, removeBlanks, (req, res, next) => {
+router.patch('/devposts/:id', requireToken, removeBlanks, (req, res, next) => {
   // if the client attempts to change the `owner` property by including a new
   // owner, prevent that by deleting that key/value pair
   delete req.body.devpost.owner
