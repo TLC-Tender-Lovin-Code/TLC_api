@@ -7,14 +7,14 @@ This API stores information on the user and a resource, resource being devposts.
 ## Important Links
 
 - [DevDen Client Repo](https://github.com/TLC-Tender-Lovin-Code/TLC_client)
-- [Deployed DevDen API]()
+- [Deployed DevDen API](https://young-lake-06085.herokuapp.com/)
 - [Deployed DevDen Client](https://tlc-tender-lovin-code.github.io/TLC_client/)
 - [Project Checklist](https://docs.google.com/document/d/1IpbqtpYSixUEgInpalWcN8SgG26YpPCgs8_X65td73c/edit?usp=sharing)
 
 ## API URL
 
 ```js
-  production: 'https://aqueous-atoll-85096.herokuapp.com',
+  production: 'https://young-lake-06085.herokuapp.com/',
   development: 'http://localhost:4741'
 ```
 
@@ -27,11 +27,11 @@ This API stores information on the user and a resource, resource being devposts.
 | DELETE | `/sign-out`            | `users#signout`   |
 | PATCH  | `/change-password`     | `users#changepw`  |
 | GET    | `/devposts`            | `devposts#index`  |
-| GET    | `/devpost/:id`         | `devposts#index`  |
-| POST   | `/create-post`         | `devposts#create` |
-| PATCH  | `/update-post/:id`     | `devposts#update` |
-| DELETE | `/delete-post/:id`     | `devposts#delete` |
-|--------|------------------------|-------------------|
+| GET    | `/devposts/:id`        | `devposts#index`  |
+| POST   | `/devposts`            | `devposts#create` |
+| PATCH  | `/devposts/:id`        | `devposts#update` |
+| DELETE | `/devposts/:id`        | `devposts#delete` |
+
 
 All data returned from API actions is formatted as JSON.
 
